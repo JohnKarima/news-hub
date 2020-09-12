@@ -1,3 +1,4 @@
+{% import 'macros.html' as macro%}
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,23 +13,19 @@
         <!-- Africa news section  -->
         <h3>Africa News</h3>
          <ul>
-            {% for africa_news in africa %}
-                <li>{{ africa_news.title }}</li>
-            {% endfor %}
+            {{ macro.displayNewsList(africa)}}
         </ul>
+
         <!-- US news section  -->
         <h3> US News </h3>
          <ul>
-            {% for us_news in us %}
-                <li>{{ us_news.title}}</li>
-            {% endfor %}
+            {{ macro.displayNewsList(us)}}
         </ul>
+
         <!-- Now showing movie -->
         <h3>United Kingdom News</h3>
          <ul>
-            {% for uk_news in uk %}
-                <li>{{ uk_news.title}}</li>
-            {% endfor %}
+            {{ macro.displayNewsList(uk)}}
         </ul>
  </body>
 </html>
