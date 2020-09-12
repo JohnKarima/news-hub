@@ -13,7 +13,21 @@
         <h3>Africa News</h3>
          <ul>
             {% for africa_news in africa %}
-                <li>{{ africa_news.author }}</li>
+                <li>{{ africa_news.title }}</li>
+            {% endfor %}
+        </ul>
+        <!-- US news section  -->
+        <h3> US News </h3>
+         <ul>
+            {% for us_news in us %}
+                <li>{{ us_news.title}}</li>
+            {% endfor %}
+        </ul>
+        <!-- Now showing movie -->
+        <h3>United Kingdom News</h3>
+         <ul>
+            {% for uk_news in uk %}
+                <li>{{ uk_news.title}}</li>
             {% endfor %}
         </ul>
  </body>
