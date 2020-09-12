@@ -1,27 +1,19 @@
-{% extends 'base.html' %}
-{% import 'macros.html' as macro%}
-
-
-<!-- Content block -->
-{% block content %}
-
-<!-- Africa news section  -->
-<h3>Africa News</h3>
-<ul>
-   {{ macro.displayNewsList(africa)}}
-</ul>
-
-<!-- US news section  -->
-<h3> US News </h3>
-<ul>
-   {{ macro.displayNewsList(us)}}
-</ul>
-
-<!-- UK news section -->
-<h3>United Kingdom News</h3>
-<ul>
-   {{ macro.displayNewsList(uk)}}
-</ul>
-
-
-{% endblock%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Home - Welcome to NewsHub; Global news at your fingertips </title>
+        {% endif %}
+    </head>
+    <body>
+        <h3>News Sources</h3>
+            <ul>
+                {% for sources_english in en %}
+                    <li>{{ sources_english.name}}</li>
+                {% endfor %}
+            </ul>
+    </body>
+</html>
