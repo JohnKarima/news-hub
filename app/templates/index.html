@@ -9,6 +9,12 @@
         {% endif %}
     </head>
     <body>
-
-    </body>
+        <!-- Africa news section  -->
+        <h3>Africa News</h3>
+         <ul>
+            {% for africa_news in africa %}
+                <li>{{ africa_news.author }}</li>
+            {% endfor %}
+        </ul>
+ </body>
 </html>
