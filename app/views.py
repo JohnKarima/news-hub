@@ -6,7 +6,8 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    return render_template('index.html')
+    title = 'Home - Welcome to NewsHub; Global news at your fingertips'
+    return render_template('index.html', title = title)
 
 @app.route('/news/<int:news_id>')
 def news(news_id):

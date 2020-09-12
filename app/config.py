@@ -12,7 +12,7 @@ class ProdConfig(Config):
     '''
     pass
 
-class DevConfig(COnfig):
+class DevConfig(Config):
     '''
     Development configuration child class
     Args:
