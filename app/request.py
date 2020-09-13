@@ -9,6 +9,9 @@ api_key = app.config['NEWS_API_KEY']
 
 base_url = app.config['NEWS_API_BASE_URL']
 
+base_url2 = app.config['NEWS_API_BASE_URL2']
+
+
 def get_source(language):
     '''
     Function that gets the json response to our url request
@@ -51,3 +54,27 @@ def process_sources(source_list):
 
       
     return source_sources
+
+# def get_selected_source(id):
+#     get_source_details_url = base_url2.format(id,api_key)
+
+#     with urllib.request.urlopen(get_source_details_url) as url:
+#         selected_source_details_data = url.read()
+#         selected_source_details_response = json.loads(selected_source_details_data)
+
+#         source_object = None
+#         if selected_source_details_response:
+#             id = selected_source_details_response.get('id')
+#             name = selected_source_details_response.get('name')
+#             author = selected_source_details_response.get('author')
+#             title = selected_source_details_response.get('title')
+#             description = selected_source_details_response.get('description')
+#             url = selected_source_details_response.get('url')
+#             urlToImage = selected_source_details_response.get('urlToImage')
+#             publishedAt = selected_source_details_response.get('publishedAt')
+#             content = selected_source_details_response.get('content')
+
+#             source_object = Source(id,name,author,title,description,url,urlToImage, publishedAt,content)
+
+#     return source_object
+    

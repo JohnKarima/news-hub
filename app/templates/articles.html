@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+
+    <!-- Poster background -->
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath" style="background: url({{source.url}}) no-repeat center center"></div>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 source-details">
+            <h3>{{ source.name }}</h3>
+
+            <p class="overview"> {{ source.author }}</p>
+            <p class="ratings"> <b> {{ source.category.vote_average }}</b> - <i>{{ source.url}} votes </i> </p>
+
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,19 +1,12 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> Home - Welcome to NewsHub; Global news at your fingertips </title>
-        {% endif %}
-    </head>
-    <body>
-        <!-- News Sources -->
-        <h3> News Sources</h3>
-        <ul>
-            {{ macro.displaySourceList(en)}}
-        </ul>
-    </body>
-</html>
+
+{% block content %}
+
+<!-- News Sources -->
+<h3> News Sources</h3>
+<ul>
+    {{ macro.displaySourceList(en)}}
+</ul>
+
+{% endblock%}
