@@ -1,14 +1,45 @@
 {% macro displaySourceList(source_list) %}
 
-    {% for source in source_list %}
-    <div class="card" style="width: 18rem;">
+
+
+{% for source in source_list %}
+
+<div class="col-sm-4 ">
         
-        <div class="card-body">
-          <h5 class="card-title">{{ source.name}}</h5>
-          <p class="card-text"> {{ source.description|truncate(100)}}</p>
-          <a href="/articles/{{source.id}}" class="btn btn-primary">visit source</a>
+    <div class="card ">
+        <div class="card-header bg-warning text-center">
+            <a id="read" class="header section-link" href="articles/{{source.id}}"> <h3>{{source.name }}</h3></a>
         </div>
-      </div>
+        <div class="card-body">
+            <p class="description">{{source.description|truncate(100)}}</p>
+        </div>
+        
+        
+    </div>
+
+</div>
+
+{% endfor %}
+
+
+
+
+    <!-- {% for source in source_list %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">{{ source.name}}</h5>
+            <p class="card-text"> {{ source.description|truncate(100)}}</p>
+            <a href="/articles/{{source.id}}" class="btn btn-primary">visit source</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
 
         <!-- <li class="text-center">
             <a href="/articles/{{source.id}}">
@@ -22,11 +53,31 @@
 {%  macro article(article_list) %}
 
     {% for arts in article_list %}
-    <!-- <div class="col-md-4 mt-3">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mt-3">
+            <div class="card">
+                <div class="card-body">
+                    
+                        <img class="card-img-top" src="{{arts.urlToImage}}" alt="Card image cap">
+                    
+                    
+                <h5 class="card-title"> Published on {{arts.publishedAt}} {{arts.author}}</h5>
+                <p class="card-text">{{arts.description |truncate(100)}}</p>
+                <a href="{{arts.url}}" class="btn btn-primary">Read full article</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+<!-- 
+    <div class="col-md-4 mt-3">
         
         <div class="card  ">
-            <div class="card-header">Published on:{{arts.publishedAt}}</div>
-            <img class="card-img-top " src="{arts.urlToImage}}"  alt="{{arts.name}}">
+            <div class="card-header">Published on: {{arts.publishedAt}}</div>
+            <img class="card-img-top" src="({arts.urlToImage}}"  alt="{{arts.name}}">
             <div class="card-body">
             <h4 class="card-title">By:{{arts.author}}</h4>
             <p class="card-text">{{arts.description |truncate(100)}}</p>
@@ -35,7 +86,7 @@
         </div>
     </div> -->
 
-    <div class="card" style="width: 18rem;">
+    <!-- <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{arts.urlToImage}}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">By: {{arts.author}}</h5>
@@ -43,6 +94,6 @@
           <p class="card-text">{{arts.description|truncate(100)}}</p>
           <a href="{{arts.url}}" class="btn btn-primary">Go to link</a>
         </div>
-      </div>
+      </div> -->
     {% endfor %}
 {% endmacro %}

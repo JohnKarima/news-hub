@@ -27,7 +27,7 @@ def article(id):
 
     article = get_article(id)
     print(article)
-    return render_template('articles.html',article = article)
+    return render_template('articles.html', article = article)
 
     #title = f'{article.title}'
     #print(article_cool)
