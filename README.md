@@ -5,7 +5,7 @@ News-Hub
 - An application that enables users to view various news sources on the homepage. Users will be able to select a news source and see all news articles from the  news source. Users can also click on an article and read the full article on the source website.
 
 # Link to Live Project
-- TBD
+- https://newshub-montez.herokuapp.com
 
 # Author 
 - [John Karima](https://github.com/JohnKarima)
