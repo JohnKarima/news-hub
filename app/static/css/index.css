@@ -1,0 +1,7 @@
+ a, a:hover{
+     text-decoration: rgb(red, green, blue);
+ }
+
+.card:hover{
+    transform: scale(1.06);
+}

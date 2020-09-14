@@ -7,18 +7,13 @@
 {% endblock %}
 
 {% block content %}
-
-
-<section class="">
-    <br>
-    <h1 class="text-center"> <b>Source News</b></h1><hr>
-
+<section><br>
+    <h1 class="text-center"> <b>Articles</b></h1>
+    <h3 class="text-center"><em>Because the press must be brave as well as free...</em></h3><hr>
     <div class="container" id="content">
             <div class="row">
-
                 {{ macro.displayArticleList(article)}}
             </div>
         </div>
 </section>
-
 {% endblock %}
