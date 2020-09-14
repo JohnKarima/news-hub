@@ -1,10 +1,19 @@
 {% macro displaySourceList(source_list) %}
 
     {% for source in source_list %}
-        <li class="text-center">
+    <div class="card" style="width: 18rem;">
+        
+        <div class="card-body">
+          <h5 class="card-title">{{ source.name}}</h5>
+          <p class="card-text"> {{ source.description|truncate(100)}}</p>
+          <a href="/articles/{{source.id}}" class="btn btn-primary">visit source</a>
+        </div>
+      </div>
+
+        <!-- <li class="text-center">
             <a href="/articles/{{source.id}}">
                 {{ source.name|truncate(100)}}</a>
-        </li>
+        </li> -->
         
     {% endfor %}
 
@@ -13,17 +22,27 @@
 {%  macro article(article_list) %}
 
     {% for arts in article_list %}
-    <div class="col-md-4 mt-3">
+    <!-- <div class="col-md-4 mt-3">
         
-        <div class="card  h-">
+        <div class="card  ">
             <div class="card-header">Published on:{{arts.publishedAt}}</div>
-            <img class="card-img-top " src="{{arts.urlToImage}}"  alt="{{arts.name}}">
+            <img class="card-img-top " src="{arts.urlToImage}}"  alt="{{arts.name}}">
             <div class="card-body">
             <h4 class="card-title">By:{{arts.author}}</h4>
             <p class="card-text">{{arts.description |truncate(100)}}</p>
             <a href="{{arts.url}}"  target="_blank" class="btn btn-primary stretched-link">Read more....</a>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{arts.urlToImage}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">By: {{arts.author}}</h5>
+          <p class="card-text">{{arts.publishedAt}}</p>
+          <p class="card-text">{{arts.description|truncate(100)}}</p>
+          <a href="{{arts.url}}" class="btn btn-primary">Go to link</a>
+        </div>
+      </div>
     {% endfor %}
 {% endmacro %}
