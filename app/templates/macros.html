@@ -6,7 +6,7 @@
 <div class="col-md-4 mt-2">
     <br>
     <div class="card ">      
-        <div class="card-header bg-danger text-center">
+        <div class="card-header bg-info text-center">
             <a id="read" class="header section-link" href="articles/{{source.id}}"> <h2>{{source.name }}</h3></a>
         </div>
         <div class="card-body">
@@ -29,10 +29,10 @@
             
             <img class="card-img-top" src="{{arts.urlToImage}}"  alt="{{arts.name}}" style="width:100%;height:56%;" class="img-responsive">
             <div class="card-body">
-            <div class="card-header">Published on:{{arts.publishedAt| truncate(13)}}</div>
-            <h4 class="card-title">By:{{arts.author}}</h4>
+            <div class="card-header">{{arts.publishedAt}}</div>
+            <h4 class="card-title">By: {{arts.author}}</h4>
             <p class="card-text">{{arts.description |truncate(100)}}</p>
-            <a href="{{arts.url}}"  target="_blank" class="btn btn-danger">Read more....</a>
+            <a href="{{arts.url}}"  target="_blank" class="btn btn-info">Read more....</a>
             </div>
         </div>
         <br>
