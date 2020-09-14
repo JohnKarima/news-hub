@@ -3,11 +3,11 @@
 {% for source in source_list %}
 
 
-<div class="col-md-4 mt-2">
+<div class="col-md-3 mt-2">
     <br>
-    <div class="card ">      
-        <div class="card-header bg-info text-center">
-            <a id="read" class="header section-link" href="articles/{{source.id}}"> <h2>{{source.name }}</h3></a>
+    <div class="card">      
+        <div class="card-header" style="background: #0277bd">
+            <a id="read" class="header section-link text-white" href="articles/{{source.id}}"> <h2>{{source.name }}</h3></a>
         </div>
         <div class="card-body">
             <p class="description">{{source.description|truncate(100)}}</p>
