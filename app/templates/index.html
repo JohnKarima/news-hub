@@ -1,12 +1,23 @@
-{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unowhatitis</title>
+</head>
+<body>
+    <h3> English news</h3>
+        <ul>
+            {{ macro.displaySourceList(en)}}
+        </ul>
 
-{% block content %}
-
-<!-- News Sources -->
-<h3> News Sources</h3>
-<ul>
-    {{ macro.displaySourceList(en)}}
-</ul>
-
-{% endblock%}
+    <h3> News French</h3>
+     <ul>
+        {% for sources_strange in fr %}
+            <li>{{ sources_strange.name}}</li>
+        {% endfor %}
+    </ul>
+   
+</body>
+</html>
